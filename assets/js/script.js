@@ -1,6 +1,6 @@
 var questionsArr = [
 {
-    question: 'Commonly used data types do not include:',
+    question: 'Commonly used data types DO NOT include:',
     choices: {
         a:'A. strings',
         b: 'B. booleans',
@@ -10,48 +10,65 @@ var questionsArr = [
     answer:'d'
 },
 
-{  quetion:'',
+{  quetion:'The condition in an if else statement is enclosed with_____',
    choices: {
-    a:'',
-    b:'',
-    c:'',
-    d:'',
+    a:'A. quotes',
+    b:'B. curly braquets',
+    c:'parenthesis',
+    d:'square brackets',
 }   ,
 
-answer: ''
+answer: 'c'
 },
 
-{  quetion:'',
+{  quetion:'Arrays in Javascript can be use to store______',
    choices: {
-    a:'',
-    b:'',
-    c:'',
-    d:'',
+    a:'A.numbers and strings',
+    b:'B.others arrays',
+    c:'C.booleans',
+    d:'D.all of the above',
 }   ,
 
-answer: ''
+answer: 'd'
 },
 
-{  quetion:'',
+{  quetion:'String values must be enclosed within____ when being assigned to variables',
    choices: {
-    a:'',
-    b:'',
-    c:'',
-    d:'',
+    a:'A.quotes',
+    b:'B.curly braquets',
+    c:'c.parenthesis',
+    d:'D.square brackets',
 }   ,
 
-answer: ''
+answer: 'a'
 },
 
-{  quetion:'',
+{  quetion:'A very useful tool used during development for printing content to the debugger is',
    choices: {
-    a:'',
-    b:'',
-    c:'',
-    d:'',
+    a:'A. Javascript',
+    b:'B.terminal/bash',
+    c:'C.For loops',
+    d:'D. console.log',
 }   ,
 
-answer: ''
+answer: 'd'
 },
 
 ];
+
+// variables set to target specific classes in the html file using 'querySelector'.
+var header = document.querySelector('.header');
+var opening = document.querySelector('.open');
+var container = document.querySelector('.container');
+var divider = document.querySelector('.divide');
+var result = document.querySelector('.final');
+var scores = [];
+var mark = 0;
+var index = 0;
+var record = [];
+
+// create view high scores using ' createElement' and 'add' methods
+var viewScore = document.createElement('p');
+viewScore.classList.add('banner', 'view-score');
+viewScore.textContent = 'View High Scores';
+
