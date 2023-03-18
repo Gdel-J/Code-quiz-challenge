@@ -58,10 +58,10 @@ answer: 'd'
 
 // variables set to target specific classes in the html file using 'querySelector'.
 var header = document.querySelector('.header');
-var opening = document.querySelector('.open');
+var open= document.querySelector('.open');
 var container = document.querySelector('.container');
-var divider = document.querySelector('.divide');
-var result = document.querySelector('.final');
+var divide = document.querySelector('.divide');
+var final = document.querySelector('.final');
 var scores = [];
 var mark = 0;
 var index = 0;
@@ -86,7 +86,7 @@ viewScore.textContent = 'View High Scores';
  // create container title
  var title = document.createElement('h1');
  title.classList.add('title');
- title.textContent = 'Code quiz challenge';
+ title.textContent = 'Code Quiz Challenge';
 
  // create container text
  var text = document.createElement('p');
@@ -103,3 +103,6 @@ viewScore.textContent = 'View High Scores';
   container.appendChild(title);
   container.appendChild(text);
   container.appendChild(startBtn);
+
+
+  
