@@ -10,3 +10,38 @@
     margin: 15px 45px;
     padding: 15px  20px;
 }
+
+.view-score {
+    cursor:pointer;
+    background-color:gold;
+    border-radius: 20px;
+    padding: 10px;
+   
+    
+}
+
+.title {
+    margin: 20px;
+    font-size: 30px;
+
+}
+
+.text {
+    
+    line-height: 1.5;
+    margin: 15px;
+    font-size: 25px;
+}
+
+.btn {
+
+    background-color:#303F9F ;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 26px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    color:whitesmoke;
+       
+}
