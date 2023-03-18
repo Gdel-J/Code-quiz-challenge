@@ -58,7 +58,7 @@ answer: 'd'
 
 // variables set to target specific classes in the html file using 'querySelector'.
 var header = document.querySelector('.header');
-var open= document.querySelector('.open');
+var open = document.querySelector('.open');
 var container = document.querySelector('.container');
 var divide = document.querySelector('.divide');
 var final = document.querySelector('.final');
@@ -66,6 +66,7 @@ var scores = [];
 var mark = 0;
 var index = 0;
 var record = [];
+
 
 
 
@@ -105,4 +106,88 @@ viewScore.textContent = 'View High Scores';
   container.appendChild(startBtn);
 
 
-  
+  function createQuiz() {
+
+    
+
+    if(index<questionsArr.lengh) {
+        //quiz container
+        var quiz= document.createElement('section');
+        quiz.classList.add('quiz');
+        container.appendChild(quiz);
+
+        // question
+        var quizTitle = document.createElement('h1');
+        quizTitle.classList.add('title');
+        quizTitle.textContent= questionsArr[index].question;
+        quiz.appendChild(quizTitle);
+
+        //options
+        var optionsObj = questionsArr[index].options;
+        for (var x in optionsObj) {
+            var quizOption = document.createElement('button');
+            quizOption.classList.add('btn', 'btn-answer');
+            if (x === questionsArr[index].answer) {
+                quizOption.setAttribute('check', 'correct');
+            }
+            quizOption.textContent = optionsObj[x];
+            quiz.appendChild(quizOption);
+        }
+
+        index++;
+
+        divide.getElementsByClassName.visibility= 'visible';
+
+         // click option
+         document.querySelector('.quiz').addEventListener('click', checkResult);
+
+    } else {
+        // final score
+
+        var done = document.createElement('h2');
+        done.classList.add('title');
+        done.textContent = 'All done';
+        container.appendChild(done);
+
+        var sum = docuemnt.createElement('p');
+        sumclassList.add('text');
+        sum.textContent = 'Your final score is'+ mark + '!';
+        container.appendChild(sum);
+
+        // form   using the 'set attribute method'
+
+        var formEl = document.createElement('form');
+        formEl.classList.add = ('form');
+        container.appendChild(formEl);
+
+        var label = document.createElement('label');
+        label.classList.add('text');
+        label.setAttribute('for', 'name');
+        label.textContent = 'Enter initials:';
+        formEl.appendChild(label);
+        
+
+        var input = document.createElement('input');
+        input.classList.add('text');
+        input.setAttribute('type', 'text');
+        input.setAttribute('name', 'name');
+        input.setAttribute('id', 'name');
+        input.setAttribute('placeholder', 'name');
+        formEl.appendChild(input); 
+
+        var submit = document.createElement('button');
+        submit.classList.add('btn', 'btn-submit');
+        submit.textContent = 'Submit';
+        formEl.appendChild(submit);
+
+        
+        // click submit button
+        document.querySelector(".btn-submit").addEventListener("click", recordHighScore);
+    }
+}
+
+
+
+
+
+
