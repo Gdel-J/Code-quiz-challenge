@@ -8,7 +8,7 @@
 This is a quiz application  using html for structure, Css for styling and Javascript for functionality mainly using the Direct Object Method/Web APIs.  The quiz asks some questions collect the answers, render if a question is well or not answered then provides a score. It is within a 60 second time limit. The results can be saved or not. 
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. 
-## Table of Contents (Optional)
+## Table of Contents 
 
 N/A
 
@@ -16,6 +16,9 @@ N/A
 
 
 -First, please Clickon the link below to open the Code quiz challenge:
+
+
+https://gdel-j.github.io/Code-quiz-challenge
 
 
 -Then:   
@@ -46,22 +49,3 @@ Start the Quiz, please answer each questions within the time limit.
 Created by Gérard DEL VECCHIO  during my UCF coding bootcamp. 
 I had help reviewing my bootcamp courses, reading many others videos  online  to make this program. 
 
-## License
-
-N/A
-
-## Badges
-
-N/A
-
-## Features
-
-N/A
-
-## How to Contribute
-
-N/A
-
-## Tests
-
-N/A

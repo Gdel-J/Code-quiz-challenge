@@ -17,7 +17,7 @@ var questions = [
       a: '3. quotes', 
       choices: [{choice: '1. commas'}, {choice: '2. curly braquets'}, {choice: '3. quotes'}, {choice: '4. parenthesis'}]
     },
-    { q: 'A very useful tool for used during development and debugging for printing content to the debugger is:', 
+    { q: 'A very useful tool to use during development and debugging for printing content to the debugger is:', 
       a: '4. Console log', 
       choices: [{choice: '1. Javascript'}, {choice: '2. terminal / bash'}, {choice: '3. for loops'}, {choice: '4. Console log'}]
     },
@@ -111,7 +111,7 @@ var setTime = function () {
     setQuestion()
   }
   
-  // next question for quiz 
+  // next question 
   var setQuestion = function() {
     resetAnswers()
     displayQuestion(arrayShuffledQuestions[QuestionIndex])
