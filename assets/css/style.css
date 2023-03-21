@@ -1,60 +1,236 @@
 * {
- margin: 0;
- padding:0;
  Box-sizing: border-box;
 }
 
-.header {
-    display:flex;
-    justify-content: space-between;
-    margin: 15px 45px;
-    padding: 15px  20px;
-}
+:root {
+    --first-color: black;
+    --second-color: purple;
+    --third-color: gold;
+    --fourth-color: white;
+    --fith-color: grey;
+    --sixth-color:rgba(228, 151, 164, 0.5);
+    font-size: 50%;
+  }
 
-.view-score {
-    cursor:pointer;
-    background-color:gold;
-    border-radius: 20px;
-    padding: 10px;
-   
-    
+  body {
+    background:var(--fourth-color);
+    color:var(--second-color);
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Style for header */
+  header {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      width: 90%;
+  }
+
+  #view-high-scores {
+    cursor: pointer;
+    background-color:var(--third-color);
+    border-radius: 5px;
+    box-shadow: 0 0 0 8px var(--third-color);
 }
-.open {
-    margin: 15px;
-    padding:15px;
-    flex-direction: column;
-    align-items: center;
-    display:flex
-}
+  
+  
+  header h4 {
+      
+      font-size: 20px;
+      display: inline;
+  }
+  
+ .timer {
+      font-size: 20px;
+      display: inline;
+      text-align: right;
+      padding-right: 10px;
+  }
+
+
+  /*Style for main content */
+
 .container {
-    text-align: center;
-    margin:20px;
-    width: 700px;
-}
+      
+      padding: 30px;
+      flex-direction: column;
+      margin: auto;
+      width: 50%;
+  }
 
-.title {
-    margin: 20px;
-    font-size: 60px;
-    font-family:Arial, Helvetica, sans-serif;
+  
+ h1 {
+    color: var(--first-color);
+    font-size: 35px;
+    font-weight: bold;
+  }
 
-}
-
-.text {
-    
-    line-height: 1.5;
-    margin: 15px;
+  p {
+    color: var(--first-color);
     font-size: 25px;
-}
+  }
 
-.btn {
+  .start {
+    align-items: center;
+    text-align: center;
+    }
+  
+ .start h1, .start p {
+     text-align: center;
+ }
 
-    background-color:#303F9F ;
+  .questions {
+    align-items: flex-start;
+    justify-content:flex-start;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .end h1, .end p {
+      text-align: left
+  }
+
+  .end input {
+    
+    border-width: 1px;
+    padding: 5px;
+    width: 25%;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .end input:focus {
+    border: 2px solid var(--second-color);
+  }
+
+  .show {
+      display: flex;
+  }
+
+  .hide {
+      display: none;
+  }
+
+  .questions {
+    color: var(--first-color);
+    text-align: left;
+    font-size: 35px;
+    
+  }
+
+  #high-score {
+      text-align: left;
+      font-size:15px ;
+  }
+
+  /*Style for button */
+  .btn {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 7px;
+    color:var(--fourth-color);
+    background-color: rgb(0, 80, 239);
+    border: none;
     padding: 5px;
     margin: 10px;
-    cursor: pointer;
-    font-size: 26px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    border-radius: 15px;
-    color:whitesmoke;
-       
+    cursor: pointer;   
+  }
+
+  .btn:hover {
+      background:var(--second-color);
+      border-radius: 10px;
+      box-shadow: 0 2px ;
+      cursor: pointer;
+  }
+
+
+  .btn:active {
+        border: none;
+        outline: none;
+        box-shadow: 0 0 var(--fith-color);
+    }
+  
+    .btn:focus {
+        outline: none;
+    
+}
+
+.btn:focus {
+    outline: none;
+}
+ 
+
+  .btn-grid {
+      display: grid;
+      grid-template-rows: repeat(4, auto);
+      grid-gap: 5px;
+      margin: 20px 0;
+  }
+
+ .startend {
+     width: 35%;
+     margin-top: 20px;
+ }
+
+ .answerbtn {
+     width: 50%;
+     text-align: center;
+     font-size: 30px;
+ }
+
+ /* Style for correct/wrong */
+
+ .banner {
+     font-size: 25px;
+     text-align: center;
+     color: grey;
+     font-style: italic;
+     margin: 0 120px;
+ }
+
+.banner h2 {
+    border-top: 2px solid var(--fith-color);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* List for High Scores */
+ 
+ ol {
+    list-style-type:upper-alpha;
+ }
+
+ li:nth-child(odd) {
+     background-color: var(--sixth-color) ;
+ }
+
+
+li {
+    font-size: 15px;
+}
+
+/* media query  */
+
+@media screen and (max-width: 1024px) {
+
+    .btn {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    #question {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
 }

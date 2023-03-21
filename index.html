@@ -2,21 +2,66 @@
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
-    <meta http-equiv="X-UA-Compatible" content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content='IE=edge'>
     <link rel='stylesheet' href='./assets/css/style.css'>
     <title>Code-quiz-challenge-GD</title>
 </head>
 <body>
     
-    <section class='header'></section>
-    <section class='open'>
-        <section class='container'></section>
-    </section>
-    <section class='divide'></section>
-    <section class='final'></section>
+    <header>
+        <h4 id="view-high-scores">View High Scores</h4> 
+        <h4 class="timer">Time: <span id="timer"></span></h4>
+    </header>
 
-    <script src='./assets/js/script.js'></script>
+    <section id="starter-container" class="show">
+        <section class="container start">
+            <h1>Coding Quiz Challenge</h1>  
+            <p>Try to answer the following  questions within the time limit. Correct answers will increase on your score with 8 points. Incorrect answers will penalize your score with 5 points  and 5 seconds on your time !</p>
+
+            <button class="btn startend" id="start-game">Start Quiz</button>
+        </section>    
+    </section>
+
+    <section id="question-container" class="hide">
+        <section class="container questions">
+            <section id="question"></section>
+            <section id="answer-buttons" class="btn-grid"></section>
+        </section>
+    </section>
+
+    <section id="end-container" class="hide">
+       <section class="container end">
+        <section id=score-banner>
+            <h1>All done!</h1>
+        </section>  
+        <form id="initials-form" class="initials">
+          <p> Enter Initials:
+            <input type="text" name="initials" id="initials" class="text-input" />
+            <button class="btn startend" id="sumbit-score" type="submit">Submit</button> </p>
+          </form>
+        </section>
+    </section>
+
+    <section id="high-score-container" class="hide">
+      <section class="high-scores container">
+        <h1 class="high-score">High Scores</h1>
+        <ol id="high-score-list" class="score-list"></ol>
+    <section>
+        <button class="btn" id="go-back">Go back</button>
+        <button class="btn" id="clear-high-scores">Clear high scores</button>
+    </section>
+</section>
+</section>
+
+<section class="hide" id="correct">
+    <h2> It is correct !</h2>
+</section>
+<section class="hide" id="wrong">
+    <h2>  Sorry it's wrong ! </h2>
+</section>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </body>
