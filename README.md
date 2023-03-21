@@ -47,5 +47,5 @@ Start the Quiz, please answer each questions within the time limit.
 ## Credits
 
 Created by Gérard DEL VECCHIO  during my UCF coding bootcamp. 
-I had help reviewing my bootcamp courses, reading many others videos  online  to make this program. 
+I had help reviewing my bootcamp courses, reading  from differents ressources and viewing online videos.
 
