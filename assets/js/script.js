@@ -23,7 +23,7 @@ var questions = [
     },
     
   ];
-// Targeting element using the DOM, specific elements using getElementById method
+// Targeting element using the DOM: specific elements using getElementById method
   var containerQuestionEl = document.getElementById("question-container");
   var containerStartEl = document.getElementById("starter-container");
   var containerEndEl = document.getElementById("end-container")
@@ -77,7 +77,7 @@ var renderStartPage = function () {
   }
 
 
-  //echeck every second if game-over is true or if there is time left. Start time at 60. 
+  //check every second if game-over is true . Start time at 60. 
 var setTime = function () {
     timeleft = 60;
   
@@ -111,7 +111,7 @@ var setTime = function () {
     setQuestion()
   }
   
-  // next question for quiz using
+  // next question for quiz 
   var setQuestion = function() {
     resetAnswers()
     displayQuestion(arrayShuffledQuestions[QuestionIndex])
@@ -193,6 +193,7 @@ var resetAnswers = function() {
   
   //create high score values
   var createHighScore = function(event) { 
+    //The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
     event.preventDefault() 
     var initials = document.querySelector("#initials").value;
     if (!initials) {
@@ -227,7 +228,7 @@ var resetAnswers = function() {
   displayHighScores();
   
   }
-  //save high score
+  //save high score. The JSON.stringify() method converts a JavaScript value to a JSON string
   var saveHighScore = function () {
     localStorage.setItem("HighScores", JSON.stringify(HighScores))
         
@@ -239,8 +240,9 @@ var resetAnswers = function() {
         if (!LoadedHighScores) {
         return false;
     }
-  
+  //The JSON.parse()  method parses a JSON string, constructing the JavaScript value or object described by the string.
     LoadedHighScores = JSON.parse(LoadedHighScores);
+    //The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. 
     LoadedHighScores.sort((a, b) => {return b.score-a.score})
   
   
@@ -248,6 +250,7 @@ var resetAnswers = function() {
         var highscoreEl = document.createElement("li");
         highscoreEl.ClassName = "high-score";
         highscoreEl.innerText = LoadedHighScores[i].initials + " - " + LoadedHighScores[i].score;
+        //The appendChild() method appends a node (element) as the last child of an element
         listHighScoreEl.appendChild(highscoreEl);
   
         HighScores.push(LoadedHighScores[i]);
@@ -261,7 +264,7 @@ var resetAnswers = function() {
     containerHighScoresEl.classList.remove("hide");
     containerHighScoresEl.classList.add("show");
     gameover = "true"
-  
+  // Using conditional to hide or show
     if (containerEndEl.className = "show") {
         containerEndEl.classList.remove("show");
         containerEndEl.classList.add("hide");
@@ -301,13 +304,13 @@ var resetAnswers = function() {
   
   loadHighScore()
     
-  //on start click, start game
+  // start game after click using addEventListener method
   btnStartEl.addEventListener("click", startGame)
-  //on submit button -- enter or click
+
   formInitials.addEventListener("submit", createHighScore)
-  //when view high-scores is clicked
+  //View your high score
   ViewHighScoreEl.addEventListener("click", displayHighScores)
-  //Go back button
+  // Click go back button to return to start over another quiz
   btnGoBackEl.addEventListener("click", renderStartPage)
   //clear scores button
   btnClearScoresEl.addEventListener("click", clearScores)
